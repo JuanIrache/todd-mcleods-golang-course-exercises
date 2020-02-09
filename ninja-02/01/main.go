@@ -8,7 +8,7 @@ import (
 
 func main() {
 	n := 1234
-	//Addition: Can read the first number of the command as an int
+	//Addition: Can read the first argument (number) of the command as an int
 	if len(os.Args) > 1 {
 		n, _ = strconv.Atoi(os.Args[1])
 	}
