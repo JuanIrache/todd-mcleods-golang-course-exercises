@@ -16,13 +16,15 @@ func main() {
 }
 
 func gen() <-chan int {
-	c := make(chan int, 100)
+	c := make(chan int)
 
-	for i := 0; i < 100; i++ {
-		c <- i
-	}
+	go func() {
 
-	close(c)
+		for i := 0; i < 100; i++ {
+			c <- i
+		}
+		close(c)
+	}()
 
 	return c
 }
