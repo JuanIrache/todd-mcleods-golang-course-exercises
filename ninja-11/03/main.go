@@ -7,7 +7,7 @@ type customErr struct {
 }
 
 func (c customErr) Error() string {
-	return fmt.Sprint(c.msg)
+	return c.msg
 }
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 }
 
 func foo(e error) {
+	fmt.Println("Foo ran")
 	fmt.Println(e)
 	fmt.Printf("%T\n", e)
-	fmt.Println(e.(error))
 }
