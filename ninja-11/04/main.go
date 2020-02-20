@@ -27,7 +27,7 @@ func sqrt(f float64) (float64, error) {
 		return 0, sqrtError{
 			lat:  "50.2289 N",
 			long: "99.4656 W",
-			err:  fmt.Errorf("f can't be a negative number, received %f\n", f),
+			err:  fmt.Errorf("f can't be a negative number, received %f", f),
 		}
 	}
 	return 42, nil
