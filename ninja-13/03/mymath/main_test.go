@@ -12,12 +12,13 @@ func TestCenteredAvg(t *testing.T) {
 	}
 }
 
-type testMap struct {
-	param  []int
-	result float64
-}
-
 func TestCenteredAvg_table(t *testing.T) {
+
+	type testMap struct {
+		param  []int
+		result float64
+	}
+
 	table := []testMap{
 		testMap{
 			param:  []int{0, 10, 4, 6},
