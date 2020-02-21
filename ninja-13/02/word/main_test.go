@@ -8,7 +8,7 @@ import (
 func TestUseCount(t *testing.T) {
 	s := "the type is all about the type"
 	res := UseCount(s)
-	if res["about"] != 1 || res["all"] != 1 || res["is"] != 1 || res["the"] != 2 || res["type"] != 2 {
+	if res["about"] != 1 || res["type"] != 2 {
 		t.Error("UseCount did not return the correct values")
 	}
 }

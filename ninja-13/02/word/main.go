@@ -1,3 +1,4 @@
+// Package word provides functions for working with strings
 package word
 
 import "strings"
